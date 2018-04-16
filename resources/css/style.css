@@ -10,6 +10,9 @@ h1{
     opacity:0.7;
 }
 h2{
+    font-family:montserrat, sans-serif;
+}
+h2,h3{
     font-weight:400;
     font-size:1.6rem;
 }
@@ -23,7 +26,7 @@ header{
     border-bottom:11px ridge rgb(89,230,232);
     padding:1.5rem;
 }
-.author{
+.author, .bib{
     text-align:center;
     padding:5px;
     margin:auto;
@@ -31,17 +34,45 @@ header{
     width:400px;
     height:50px;
     border-radius:25px;
+    
+}
+.author{
     background-color:rgb(170, 25, 163);
     position:relative;
-    bottom:20px;
+    top:10px;
+    white-space: nowrap;
+    margin-bottom:20px;
+    width:fit-content;
+    height:fit-content;
 }
-.author h2{
+.author h3, .bib h3{
     margin:10px;
+}
+.author h3{
+    font-size:1.4rem;
+}
+.bib h3{
+    margin-bottom:30px;
+}
+.bib{
+    position:relative;
+    margin:auto;
+    background-color:rgb(255, 102, 0);
+}
+
+.bib ol{
+    width:90%;
+    display:none;
+    list-style-type:decimal;
+    margin:auto;
+}
+.bib ol li{
+    line-height:1.5rem;
 }
 .content{
     position:relative;
     padding:0;
-    margin:10px 50px 40px 50px;
+    margin:10px 50px;
     border-radius: 25px;
     height:700px;
     overflow:hidden;
@@ -75,6 +106,24 @@ header{
     position:relative;
     bottom:210px;
 
+}
+.test{
+    display:none;
+}
+@media only screen and (max-width:1450px){
+    .test{
+        display: flex;
+    }
+}
+@media only screen and (max-width:1250px){
+    .test{
+        display:block;
+    }
+}
+@media only screen and (max-width:1050px){
+    .test{
+        display:inline;
+    }
 }
 @media only screen and (max-width:1200px){
     .content{
