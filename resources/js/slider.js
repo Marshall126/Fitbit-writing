@@ -7,7 +7,7 @@ $(document).ready(function(){
       slidesToShow:1,
       arrows: false,
       infinite:true, 
-      autoplay:true,
+      autoplay:true
     });
     //animating bibliography
     let big = false;
@@ -16,26 +16,31 @@ $(document).ready(function(){
         $('.bib ol').css({
           display:'inline-block'
         });
-        if($('.test').css('display')=='flex'){
-          $('.bib').animate({
-            width: '80%',
-            height: '600px'
-          }, 300);
-        }else if($('.test').css('display')=='block'){
-          $('.bib').animate({
-            width: '80%',
-            height: '700px'
-          }, 300);
-        }else if($('.test').css('display')=='inline'){
-          $('.bib').animate({
-            width: '80%',
-            height: '800px'
-          }, 300);
-        }else{
-          $('.bib').animate({
-            width: '80%',
-            height: '500px'
-          }, 300);
+        switch($('.test').css('display')){
+          case 'flex':
+              $('.bib').animate({
+              width: '80%',
+              height: '600px'
+            }, 300);
+          break;
+          case 'block':
+            $('.bib').animate({
+              width: '80%',
+              height: '700px'
+            }, 300);
+          break;
+          case 'inline':
+            $('.bib').animate({
+              width: '80%',
+              height: '800px'
+            }, 300);
+          break;
+          default:
+            $('.bib').animate({
+              width: '80%',
+              height: '500px'
+            }, 300);
+          break;
         }
         big = true;
       }else{
