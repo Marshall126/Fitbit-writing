@@ -13,35 +13,15 @@ $(document).ready(function(){
     let big = false;
     $('.bib').click(function(){
       if(big==false){
+        let bibHeight = $('.test').css('font-weight');
+        console.log(biHeight);
         $('.bib ol').css({
           display:'inline-block'
         });
-        switch($('.test').css('display')){
-          case 'flex':
-              $('.bib').animate({
-              width: '80%',
-              height: '600px'
-            }, 300);
-          break;
-          case 'block':
-            $('.bib').animate({
-              width: '80%',
-              height: '700px'
-            }, 300);
-          break;
-          case 'inline':
-            $('.bib').animate({
-              width: '80%',
-              height: '800px'
-            }, 300);
-          break;
-          default:
-            $('.bib').animate({
-              width: '80%',
-              height: '500px'
-            }, 300);
-          break;
-        }
+        $('.bib').animate({
+          width: '80%',
+          height: bibHeight
+        }, 300);
         big = true;
       }else{
         $('.bib').animate({width: '400px', height: '50px'}, 300);
