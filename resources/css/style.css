@@ -162,6 +162,7 @@ header{
     background-color:rgba(231, 7, 138, 0.7);
     border-radius: 25px;
     margin-top:20px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .back{
