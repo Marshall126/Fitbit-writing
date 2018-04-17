@@ -14,7 +14,6 @@ $(document).ready(function(){
     $('.bib').click(function(){
       if(big==false){
         let bibHeight = $('.test').css('font-weight');
-        console.log(biHeight);
         $('.bib ol').css({
           display:'inline-block'
         });
